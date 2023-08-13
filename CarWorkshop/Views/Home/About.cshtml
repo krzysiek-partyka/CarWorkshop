@@ -1,0 +1,16 @@
+﻿@model List<About>
+<ul>
+@foreach(var element in Model)
+{
+    <h1>@element.Title </h1>
+    <div class="alert alert-secondary">@element.Description </div>
+     <ul>
+        @*@element.Tags.ForEach();*@
+    @foreach(var tag in element.Tags)
+        {
+           <li> @tag</li> 
+        }
+    </ul>
+    
+}
+</ul>
